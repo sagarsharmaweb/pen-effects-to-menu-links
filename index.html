@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer - stroke</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        svg {
+            width: 200px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        
+        .path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 1.8em;
+            color: #666;
+            font-weight: 700;
+        }
+        
+        #menu {
+            width: 300px;
+            padding: 50px 50px;
+        }
+        
+        #menu:hover ~ #Layer_1 .path {
+            animation: dash 1s;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes dash {
+            from {
+                stroke-dashoffset: 1000;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="menu"><a id="menu_item" href="#">ABOUT</a></div>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 267 180" style="enable-background:new 0 0 267 180;" xml:space="preserve">
+        <path class="path" style="fill:none;stroke:#20328E;stroke-width:12;stroke-miterlimit:10;" d="M250.5,34.5c0,0-218.62-20.57-231,63
+	c-12,81,249,71,222,21c-42.55-78.8-170-86-170-86" />
+    </svg>
+</body>
+
+</html>
